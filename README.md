@@ -1,2 +1,2 @@
-My CV  
-https://jackfrost58.github.io/rsschool-cv/
+My Resume 
+https://jackfrost58.github.io/resume/
