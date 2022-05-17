@@ -27,7 +27,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 50px;
     background: linear-gradient(to right, #F8F8FF 76%, white 24%);
 }
@@ -261,12 +261,29 @@ footer {
 }
 
 .contact__text {
+    position: relative;
     font-size: 20px;
     padding-left: 10px;
 }
 
-.contact__text:hover {
-    text-decoration: underline;
+.contact__text a:after {
+	position: absolute;
+        left: 9px;
+        top: 22px;
+	content: '';
+    width: 0;
+	height: 5px;
+	border-bottom: solid 3px var(--primary-color);
+	transition: all 0.5s ease-in-out;	
+	opacity: 1;
+}
+
+.contact__text a:hover:after {
+	width: 98%; 
+}
+
+.icon .contact__text a:hover:after {
+	width: 98%; 
 }
 
 .icon {
@@ -279,8 +296,8 @@ footer {
     background-image: url("./assets/icon/mobile.svg");
 }
 
-.icon-discord {
-    background-image: url("./assets/icon/discord.svg");
+.icon-telegram {
+    background-image: url("./assets/icon/telegram.svg");
 }
 
 .icon-email {
@@ -297,4 +314,21 @@ footer {
 
 .footer__text {
     margin: 0 10px;
+}
+
+a span {
+    color: black;
+    cursor: pointer;
+}
+
+a span:hover {
+    text-decoration: underline;
+}
+
+.icon-git_hover {
+    transition: 0.4s;
+}
+
+.icon-git_hover:hover {
+    filter: var(--color-icon);
 }
